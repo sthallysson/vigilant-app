@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    style="@style/Background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:textSize="32sp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/white"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_name_login"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_email"
+            android:textColorHint="@color/gray_400"
+            app:counterTextColor="@color/gray_400"
+            app:helperTextTextColor="@color/gray_400"
+            app:hintTextColor="@color/blue_400"
+            app:placeholderTextColor="@color/gray_400"
+            app:prefixTextColor="@color/gray_400"
+            app:startIconDrawable="@drawable/ic_mail_outline"
+            app:suffixTextColor="@color/gray_400"
+            app:startIconTint="@color/gray_400"
+            app:boxStrokeColor="@color/text_input_box_stroke_color"
+            android:layout_marginBottom="5dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:inputType="text|textEmailAddress"
+                android:paddingStart="50dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/gray_400"
+                android:textColorHint="@color/gray_400"
+                android:textColorLink="@color/blue_400" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_password"
+            android:textColorHint="@color/gray_400"
+            app:counterTextColor="@color/gray_400"
+            app:endIconMode="password_toggle"
+            app:helperTextTextColor="@color/gray_400"
+            app:hintTextColor="@color/blue_400"
+            app:prefixTextColor="@color/gray_400"
+            app:startIconDrawable="@drawable/ic_outline_lock"
+            app:suffixTextColor="@color/gray_400"
+            app:startIconTint="@color/gray_400"
+            app:endIconTint="@color/gray_400"
+            app:boxStrokeColor="@color/text_input_box_stroke_color"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:inputType="textPassword"
+                android:paddingStart="50dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/gray_400"
+                android:textColorHint="@color/gray_400"
+                android:textColorLink="@color/blue_400"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_entrar"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/login_btn_signin"
+            android:textColorLink="@color/blue_400"
+            android:textIsSelectable="true"
+            android:backgroundTint="@color/blue_400"/>
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_btn_newAcount"
+            android:textColor="@color/gray_400"
+            android:textColorLink="@color/blue_400"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

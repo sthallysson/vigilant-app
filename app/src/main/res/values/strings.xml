@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">vigilant</string>
+    <string name="login_title">Entrar</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Senha</string>
+    <string name="login_btn_signin">Entrar</string>
+    <string name="login_btn_newAcount">Não tem conta? Criar</string>
+</resources>

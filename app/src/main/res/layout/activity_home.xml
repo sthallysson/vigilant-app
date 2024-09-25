@@ -84,17 +84,17 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#27273A"
+        android:paddingTop="20dp"
         app:itemActiveIndicatorStyle="@color/blue_400"
         app:itemIconTint="#8B8B94"
-        app:itemPaddingBottom="20dp"
-        app:itemPaddingTop="20dp"
+        app:itemPaddingBottom="0dp"
+        app:itemPaddingTop="0dp"
         app:itemRippleColor="@color/blue_400"
         app:itemTextColor="#8B8B94"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav"
-    >
+        app:menu="@menu/bottom_nav">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

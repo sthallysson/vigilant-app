@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    style="@style/Background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    style="@style/Background"
-    >
+    android:backgroundTint="@color/main_bg"
+    tools:context=".HomeActivity">
 
     <Button
         android:id="@+id/btn_openMap"
@@ -17,33 +17,35 @@
         android:text="@string/btn_openMap"
         android:textColor="@color/white"
         android:textColorLink="@color/blue_400"
+        android:textIsSelectable="true"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textIsSelectable="true"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="128dp"
         android:orientation="horizontal"
         android:paddingStart="90dp"
-        android:paddingTop="50dp"
+        android:paddingTop="40dp"
         android:paddingEnd="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
 
-        <ImageView
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/profile_img" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,10 +56,10 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gray_400"
                 android:paddingLeft="8dp"
-                android:textSize="14sp"
-                android:text="Olá," />
+                android:text="Olá,"
+                android:textColor="@color/gray_400"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/btn_profile"
@@ -70,11 +72,41 @@
                 android:text="João Silva"
                 android:textColor="@color/white"
                 android:textColorLink="@color/blue_400"
-                android:textSize="18sp"
                 android:textIsSelectable="true"
+                android:textSize="18sp"
 
                 />
+
         </LinearLayout>
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#27273A"
+        app:itemActiveIndicatorStyle="@color/blue_400"
+        app:itemIconTint="#8B8B94"
+        app:itemPaddingBottom="20dp"
+        app:itemPaddingTop="20dp"
+        app:itemRippleColor="@color/blue_400"
+        app:itemTextColor="#8B8B94"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav"
+    >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/worldmap" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
